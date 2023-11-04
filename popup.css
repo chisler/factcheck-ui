@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f7f8fa;
+    text-align: center;
+  }
+  
+  .container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+  
+  .fact-check-button {
+    background-color: #007aff; /* Blue */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 13px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .fact-check-button:hover {
+    background-color: #005ecb;
+  }
+  
+  .fact-check-button:active {
+    background-color: #003e7e;
+  }
+  
+  /* Optional: Add some animation on hover */
+  .fact-check-button:hover {
+    animation: pulse-animation 1s infinite;
+  }
+  
+  @keyframes pulse-animation {
+    0% {
+      box-shadow: 0 0 0 0px rgba(0, 122, 255, 0.7);
+    }
+    100% {
+      box-shadow: 0 0 0 20px rgba(0, 122, 255, 0);
+    }
+  }
+  
+
+.show-problems-button {
+    margin-top: 10px;
+    background-color: #ff9500; /* Orange */
+  }
+  
+  .show-problems-button:hover {
+    background-color: #c47700;
+  }
+  
+  .show-problems-button:active {
+    background-color: #8f5700;
+  }
+  
+  .problem-list {
+    margin-top: 15px;
+    text-align: left;
+    display: none; /* Hidden by default */
+  }
+  
+  .problem-item {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .problem-item a {
+    color: #007aff;
+    text-decoration: none;
+  }
+  
