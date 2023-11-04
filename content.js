@@ -3,8 +3,8 @@ const useMockApi = false; // Set this to false to use the real API
 
 function extractAndSendArticleText() {
     const paragraphTags = document.querySelectorAll('p');
-    const articleText = Array.from(paragraphTags).map(p => p.textContent.trim()).join('\n\n');
-
+    const articleText = Array.from(paragraphTags).map(p => p.textContent.trim()).join('\n');
+    
     if (articleText) {
         if (useMockApi) {
             // Mock sending the extracted article text to the API and receiving a response
@@ -33,7 +33,7 @@ function sendArticleToApi(articleText) {
         headers: {
             'Content-Type': 'text/plain' // The API expects plain text in the body
         },
-        body: articleText.substring(0, 1500) // Send the article text directly as a string
+        body: articleText.substring(0, 10000) // Send the article text directly as a string
     };
 
     // Send the request to the API
@@ -79,7 +79,7 @@ function createDoubtBubble(text, href) {
 function createBubble(text, href) {
     const bubble = document.createElement('span');
     bubble.className = 'bubble';
-    bubble.innerHTML = `<span>${text}<a href="${href}" target="_blank" style="text-decoration: none; color: white;">Source 🔗</a></span>`;
+    bubble.innerHTML = `<span>${text}<a href="${href}" target="_blank""> Source 🔗</a></span>`;
     return bubble;
 }
 
@@ -103,13 +103,7 @@ function highlightTextWithQuote(paragraphTags, quote, reason_for_doubt, danger_l
         const chunkPresent = quoteChunks.some(chunk => p.textContent.includes(chunk));
         if (chunkPresent) {
             // Highlight the paragraph
-            if (danger_level === "high") {
-                p.style.color = 'red';
-            } else if (danger_level === "mid") {
-                p.style.color = 'orange';
-            } else if (danger_level === "low") {
-                p.style.color = 'yellow';
-            }
+            p.style.color = 'red';
             p.style.fontWeight = 'bold';
 
             // If this is the first paragraph that contains the quote, append the bubble
