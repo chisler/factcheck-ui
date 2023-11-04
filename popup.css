@@ -7,8 +7,10 @@ body {
   
   .container {
     padding: 20px;
+    width: 600px;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     min-height: 100vh;
     box-sizing: border-box;
@@ -24,6 +26,7 @@ body {
     font-weight: 600;
     cursor: pointer;
     outline: none;
+    width: 200px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: background-color 0.2s ease-in-out;
   }
@@ -52,8 +55,19 @@ body {
   
 
 .show-problems-button {
-    margin-top: 10px;
+    width: 200px;
     background-color: #ff9500; /* Orange */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 13px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    width: 200px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease-in-out;
   }
   
   .show-problems-button:hover {

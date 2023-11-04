@@ -1,10 +1,12 @@
 // content.js
 const useMockApi = false; // Set this to false to use the real API
+// Add a loading state to the button
+
 
 function extractAndSendArticleText() {
     const paragraphTags = document.querySelectorAll('p');
     const articleText = Array.from(paragraphTags).map(p => p.textContent.trim()).join('\n');
-    
+
     if (articleText) {
         if (useMockApi) {
             // Mock sending the extracted article text to the API and receiving a response
@@ -33,7 +35,7 @@ function sendArticleToApi(articleText) {
         headers: {
             'Content-Type': 'text/plain' // The API expects plain text in the body
         },
-        body: articleText.substring(0, 10000) // Send the article text directly as a string
+        body: articleText // Send the article text directly as a string
     };
 
     // Send the request to the API
@@ -114,6 +116,7 @@ function highlightTextWithQuote(paragraphTags, quote, reason_for_doubt, danger_l
         }
     });
 }
+
 
 
 
