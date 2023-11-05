@@ -17,7 +17,7 @@ function extractAndSendArticleText() {
             },];
 
             console.log('Success (Mock):', mockApiResponse);
-            highlightTextWithQuote(paragraphTags, mockApiResponse.quote, mockApiResponse.reason_for_doubt);
+            highlightTextWithQuote(paragraphTags, mockApiResponse.quote, mockApiResponse.reason_for_doubt,);
         } else {
             sendArticleToApi(articleText);
         }
@@ -50,7 +50,7 @@ function sendArticleToApi(articleText) {
             console.log('Success (API):', data_array);
             data_array.forEach(data => { // Assuming data_array is an array
                 console.log("processing", data);
-                highlightTextWithQuote(document.querySelectorAll('p'), data.quote, data.reason_for_doubt, data.danger_level);
+                highlightTextWithQuote(document.querySelectorAll('p'), data.quote, data.reason_for_doubt, data.danger_level, data.sources?.length > 0 ? data.sources[0].url : `https://www.google.com/search?q=${data.reason_for_doubt}`);
             });
         })
         .catch(error => {

@@ -1,47 +1,72 @@
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f7f8fa;
+    /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; */
+    /* background-color: #f7f8fa; */
+    font-family: 'Times New Roman', Times, serif;
+    background-color: antiquewhite;
     text-align: center;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 5px !important;
   }
   
   .container {
     padding: 20px;
     width: 600px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
     box-sizing: border-box;
+    gap: 20px;
+  }
+
+  .subcontainer{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 100%;
+    gap: 3em;
+  }
+  
+ 
+  .subcontainer-logo{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
   }
   
   .fact-check-button {
-    background-color: #007aff; /* Blue */
+    background-color:rgb(133, 46, 46); 
     color: white;
     padding: 10px 20px;
     border: none;
-    border-radius: 13px;
+    /* border-radius: 13px; */
     font-size: 17px;
     font-weight: 600;
     cursor: pointer;
     outline: none;
     width: 200px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.2s ease-in-out;
+    /* transition: background-color 0.2s ease-in-out; */
+    font-family: "Rubens"
   }
   
   .fact-check-button:hover {
-    background-color: #005ecb;
+    background-color:  rgb(220, 94, 94);
   }
   
   .fact-check-button:active {
-    background-color: #003e7e;
+    background-color: red;
   }
   
   /* Optional: Add some animation on hover */
   .fact-check-button:hover {
-    animation: pulse-animation 1s infinite;
+    /* animation: pulse-animation 1s infinite; */
   }
   
   @keyframes pulse-animation {
@@ -56,22 +81,23 @@ body {
 
 .show-problems-button {
     width: 200px;
-    background-color: #ff9500; /* Orange */
+    background-color: #a08e76; /* Orange */
     color: white;
     padding: 10px 20px;
     border: none;
-    border-radius: 13px;
+    /* border-radius: 13px; */
     font-size: 17px;
     font-weight: 600;
     cursor: pointer;
     outline: none;
     width: 200px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.2s ease-in-out;
+    /* transition: background-color 0.2s ease-in-out; */
+    font-family: 'Times New Roman', Times, serif;
   }
   
   .show-problems-button:hover {
-    background-color: #c47700;
+    background-color: #c8a167;
   }
   
   .show-problems-button:active {

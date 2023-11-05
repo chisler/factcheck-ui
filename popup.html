@@ -1,18 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Fact Check</title>
+  <meta charset="UTF-8">
+  <title>Fact Check - Watson</title>
   <link rel="stylesheet" type="text/css" href="popup.css">
 </head>
 
 <body>
   <div class="container">
-    <div>
-      <button id="extractText" class="fact-check-button">Fact Check This Article</button>
-      <button id="showProblems" class="fact-check-button show-problems-button">Show Problematic Elements</button>
+    <div class="subcontainer-logo">
+      <h1 class="title">Watson</h1>
     </div>
-    <div id="problemList" class="problem-list"></div>
+    <div class="subcontainer-logo">
+      <i>When you have eliminated the impossible, whatever remains, however improbable, must be the truth. Dr. Watson.</i>
+    </div>
+    <div class="subcontainer">
+      <button id="extractText" class="fact-check-button">Fact Check This</button>
+      <button id="showProblems" class="show-problems-button">Article Report</button>
+    </div>
+    <div id="problemList" class="problem-list">
+      <!-- Problematic elements will be listed here -->
+    </div>
+    <div class="subcontainer">
+      <div class="powered-by">
+        Powered by
+        <img src="Anthropic_logo.png" alt="Anthropic Logo" width="50px" />
+      </div>
+    </div>
   </div>
   <script src="popup.js"></script>
 </body>

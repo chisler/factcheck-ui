@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Pop the bubble",
+  "name": "Watson",
   "version": "1.0",
   "permissions": ["activeTab", "scripting"],
   "background": {
@@ -8,16 +8,13 @@
   },
   "action": {
     "default_popup": "popup.html",
-    "default_icon": {
-      "16": "icon16.png",
-      "48": "icon48.png",
-      "128": "icon128.png"
-    }
+    "default_icon": "watson.png"
   },
   "icons": {
-    "16": "icon16.png",
-    "48": "icon48.png",
-    "128": "icon128.png"
+    "16": "watson.png",
+    "32": "watson.png",
+    "48": "watson.png",
+    "128": "watson.png"
   },
   "content_scripts": [
     {
